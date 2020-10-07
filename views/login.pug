@@ -1,0 +1,13 @@
+extends default
+
+block content
+    h1 Login
+    form(method = 'POST', action = '/users/login')
+        p
+            label Username:
+            input.form-control(name='username',type='text', placeholder='Username')
+            br
+            label Password:
+            input.form-control(name='password',type='password', placeholder='Password')
+            br
+            input.btn.btn-primary(type='submit',value='Submit')

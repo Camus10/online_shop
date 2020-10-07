@@ -1,0 +1,25 @@
+doctype html
+
+html
+    head
+        title My Online Shop
+    body        
+        ul
+            li
+                a(href = '/') Home
+            if user
+                li
+                    a(href = '/secure') Secure
+        ul
+            if user
+                li
+                    a(href = '#') #{user.name}
+                    a(href = '/users/logout') Logout
+            else
+                li
+                    a(href = '/users/login') Login
+                    |
+                    |
+                    a(href = '/users/register') Register
+
+    block content
